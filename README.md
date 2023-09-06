@@ -16,7 +16,7 @@
 <br>
 
 ## 🎴 Como Usar?
-
+- Criar o arquivo .env na raiz do projeto
 - Dentro da raiz do projeto execute os seguintes comandos
 
 ```bash
