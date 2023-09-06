@@ -15,9 +15,6 @@ use function PHPUnit\Framework\assertNotEquals;
 
 class AccountServiceTest extends TestCase
 {
-    private MockObject $mockAccountModel;
-
-    private MockObject $mockAccountRepository;
 
     private \ReflectionClass $accountServiceReflected;
 
@@ -35,13 +32,14 @@ class AccountServiceTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->mockAccountModel = $this->getMockBuilder(Account::class)->getMock();
-        $this->mockAccountRepository = $this->getMockBuilder(AccountRepository::class)
-            ->setConstructorArgs([$this->mockAccountModel])
+
+        $mockAccountModel = $this->getMockBuilder(Account::class)->getMock();
+        $mockAccountRepository = $this->getMockBuilder(AccountRepository::class)
+            ->setConstructorArgs([$mockAccountModel])
             ->getMock();
 
         $this->accountServiceReflected = new \ReflectionClass(AccountService::class);
-        $this->accountService = new AccountService($this->mockAccountRepository);
+        $this->accountService = new AccountService($mockAccountRepository);
 
     }
 
