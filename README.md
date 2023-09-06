@@ -3,8 +3,8 @@
 #### `Back-end`
 
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit#phpunit)
-- [Laravel](https://laravel.com/docs/master)
-- [LaravelSail](https://lumen.laravel.com/)
+- [Laravel](https://laravel.com/docs/10.x)
+- [LaravelSail](https://laravel.com/docs/10.x/sail)
 
 <br>
 
@@ -30,6 +30,14 @@ docker run --rm \
 
 ```bash
 ./vendor/bin/sail up -d
+```
+
+<br>
+
+- Na raiz do projeto existe uma collection do Postman contendo os endpoints
+
+```link
+https://github.com/vitorMendonca95/objective-challenge-api/blob/master/objetive-challenge-api.postman_collection.json
 ```
 
 <br>
