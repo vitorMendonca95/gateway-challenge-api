@@ -33,3 +33,11 @@ docker run --rm \
 ```
 
 <br>
+
+- Na raiz do projeto existe uma collection do Postman contendo os endpoints
+
+```link
+https://github.com/vitorMendonca95/objective-challenge-api/blob/master/objetive-challenge-api.postman_collection.json
+```
+
+<br>
