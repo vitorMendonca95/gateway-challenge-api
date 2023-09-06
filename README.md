@@ -16,7 +16,7 @@
 <br>
 
 ## 🎴 Como Usar?
-- Criar o arquivo .env na raiz do projeto
+- Criar o arquivo .env
 - Dentro da raiz do projeto execute os seguintes comandos
 
 ```bash
@@ -39,7 +39,7 @@ docker run --rm \
 
 <br>
 
-- Na raiz do projeto existe uma collection do Postman contendo os endpoints
+- No mesmo diretório, existe uma collection do Postman contendo os endpoints
 
 ```link
 https://github.com/vitorMendonca95/objective-challenge-api/blob/master/objetive-challenge-api.postman_collection.json
