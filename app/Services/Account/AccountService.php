@@ -15,12 +15,20 @@ class AccountService implements AccountServiceInterface
     {
     }
 
+    /**
+     * @param int $accountId
+     * @return Model
+     */
     public function getAccount(int $accountId) : Model
     {
-        return $this->accountRepository->getById($accountId);
+        return $this->accountRepository->findById($accountId);
     }
 
 
+    /**
+     * @param Collection $accountParams
+     * @return Builder|Account
+     */
     public function create(Collection $accountParams): Builder|Account
     {
         $amount = $accountParams['amount'];
@@ -29,6 +37,10 @@ class AccountService implements AccountServiceInterface
         return $this->accountRepository->create($accountParams);
     }
 
+    /**
+     * @param float $amount
+     * @return float
+     */
     private function addDefaultAmountOnCreate(float $amount): float
     {
         return $amount + (float) config('account.default_amount_on_create');

@@ -15,11 +15,19 @@ class AccountRepository implements AccountRepositoryInterface
     {
     }
 
-    public function getById(int $accountId) : Model
+    /**
+     * @param int $accountId
+     * @return Model
+     */
+    public function findById(int $accountId) : Model
     {
         return $this->model::query()->findOrFail($accountId);
     }
 
+    /**
+     * @param Collection $accountParams
+     * @return Builder|Account
+     */
     public function create(Collection $accountParams): Builder|Account
     {
         $this->model
@@ -27,5 +35,15 @@ class AccountRepository implements AccountRepositoryInterface
             ->save();
 
         return $this->model;
+    }
+
+    /**
+     * @param int $accountId
+     * @param float $newAmount
+     * @return bool|int
+     */
+    public function updateAmountById(int $accountId, float $newAmount): bool|int
+    {
+        return $this->model::query()->findOrFail($accountId)->update(['amount' => $newAmount]);
     }
 }
