@@ -3,8 +3,8 @@
 #### `Back-end`
 
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit#phpunit)
-- [Laravel](https://laravel.com/docs/master)
-- [LaravelSail](https://lumen.laravel.com/)
+- [Laravel](https://laravel.com/docs/10.x)
+- [LaravelSail](https://laravel.com/docs/10.x/sail)
 
 <br>
 
