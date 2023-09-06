@@ -32,6 +32,11 @@ docker run --rm \
 ./vendor/bin/sail up -d
 ```
 
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
 <br>
 
 - Na raiz do projeto existe uma collection do Postman contendo os endpoints
