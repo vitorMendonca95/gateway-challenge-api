@@ -15,9 +15,12 @@
 
 <br>
 
+## 📣 Informaçoes importantes
+- O user e password do banco de dados MySQL, serão definidos pelos valores das variáveis `DB_USERNAME` e `DB_PASSWORD` do arquivo `.env` da aplicação durante o build. Será criado também o usuário root contendo a mesma senha.
+- As portas dos serviços de aplicação e de banco de dados foram mantidas em seu padrão (portas 80 e 3306). Caso seja necessário, as portas poderão ser alteradas no arquivo `docker-compose.yml`.
+
 ## 🎴 Como Usar?
 - Criar o arquivo .env
-- O user e password do banco de dados que será criado no build do MySql, será definido pelo valor das variáveis `DB_USERNAME` e `DB_PASSWORD` do arquivo `.env`. Será criado também o usuário root contendo a mesma senha.
 - Dentro da raiz do projeto execute os seguintes comandos
 
 ```bash
