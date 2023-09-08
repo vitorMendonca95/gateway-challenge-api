@@ -15,8 +15,12 @@
 
 <br>
 
-## 🎴 Como Usar?
+## 📣 Informações importantes
+- O user e password do banco de dados MySQL, serão definidos pelos valores das variáveis `DB_USERNAME` e `DB_PASSWORD` do arquivo `.env` da aplicação durante o build. Será criado também o usuário root contendo a mesma senha.
+- As portas dos serviços de aplicação e de banco de dados foram mantidas em seu padrão (portas 80 e 3306). Caso seja necessário, as portas poderão ser alteradas no arquivo `docker-compose.yml`.
 
+## 🎴 Como Usar?
+- Criar o arquivo .env
 - Dentro da raiz do projeto execute os seguintes comandos
 
 ```bash
@@ -32,9 +36,14 @@ docker run --rm \
 ./vendor/bin/sail up -d
 ```
 
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
 <br>
 
-- Na raiz do projeto existe uma collection do Postman contendo os endpoints
+- No mesmo diretório, existe uma collection do Postman contendo os endpoints
 
 ```link
 https://github.com/vitorMendonca95/objective-challenge-api/blob/master/objetive-challenge-api.postman_collection.json
