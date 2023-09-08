@@ -44,14 +44,23 @@ class AccountServiceTest extends TestCase
     }
 
     /**
-     * A basic unit test example.
+     * @dataProvider valueProvider
      * @throws ReflectionException
      */
-    public function testIfAddDefaultAmountOnCreateIsWasCorrect(): void
+    public function testIfAddDefaultAmountOnCreateIsWasCorrect($value, $expectedResult): void
     {
         $addDefaultAmountOnCreate = $this->accountServiceReflected->getMethod('addDefaultAmountOnCreate');
-        $amountWithInitialValue = $addDefaultAmountOnCreate->invokeArgs($this->accountService, [100]);
+        $amountWithInitialValue = $addDefaultAmountOnCreate->invokeArgs($this->accountService, [$value]);
 
-        assertEquals(600, $amountWithInitialValue);
+        assertEquals($expectedResult, $amountWithInitialValue);
+    }
+
+    public static function valueProvider(): array
+    {
+        return [
+          'shouldBeValidWhenFunctionIncreaseValueCorrectly1'  => ['value' => 100, 'expected' => 600],
+          'shouldBeValidWhenFunctionIncreaseValueCorrectly2'  => ['value' => 200, 'expected' => 700],
+          'shouldBeValidWhenFunctionIncreaseValueCorrectly3'  => ['value' => 50, 'expected' => 550],
+        ];
     }
 }
